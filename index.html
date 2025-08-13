@@ -923,25 +923,74 @@ count: false
 
 ---
 
+.left-column[
+## Vox Pupuli
+### Was?
+### Wer?
+### Zusammenfassung!
+]
+
+.right-column[
+
+* Vox Pupuli stellt einen Großteil der meist genutzten Module
+
+  * Perforce hat 162 "öffentliche" Module, Vox Pupuli 194
+
+* Vox Pupuli verwaltet 95% Tools zum testen und veröffentlichen von Modulen
+
+* Vox Pupuli verbindet Domain Experts, Entwickler und User
+
+]
+
+???
+
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### Was?
+### Wer?
+### Zusammenfassung!
+]
+
+.right-column[
+
+* Vox Pupuli stellt einen Großteil der meist genutzten Module
+
+  * Perforce hat 162 "öffentliche" Module, Vox Pupuli 194
+
+* Vox Pupuli verwaltet 95% Tools zum testen und veröffentlichen von Modulen
+
+* Vox Pupuli verbindet Domain Experts, Entwickler und User
+
+* Vox Pupuli ist die Grundlage für den kommerziellen Erfolg von Perforce
+
+]
+
+???
+
+* Perforce hat ein kommerzielles Produkt, PE
+
+---
 class: center, middle, inverse
 
-# Wie funktioniert<br>Vox Pupuli?
-
-???
-
-* now you might as yourself. this sounds amazing, how does it work? Glad you're asking
+## November 2024 -<br><br> Perforce bricht mit der Community
 
 ---
+
 .left-column[
-## Vox Pupuli
+## Perforce
 ### Was?
-### Wer?
-### Wieso?
-### Wie?
 ]
 
 .right-column[
-![img](flowchart.svg)
+* Perforce baut keine Open Source Pakete mehr für Puppet Agent/Server/DB
+
+* Zukünftige Entwicklung soll in privaten Git Repos passieren
+
 ]
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -949,21 +998,23 @@ class: center, middle, inverse
 
 ???
 
-* who worked in a company with a similar complex org chart?
-* Who liked it?
-* Who prefers small/flat hierarchies?
 ---
 
+count: false
+
 .left-column[
-## Vox Pupuli
+## Perforce
 ### Was?
-### Wer?
-### Wieso?
-### Wie?
 ]
 
 .right-column[
-![img](voxpupuli.svg)
+* Perforce baut keine Open Source Pakete mehr für Puppet Agent/Server/DB
+
+* Zukünftige Entwicklung soll in privaten Git Repos passieren
+
+* Es gibt eine "Developer EULA" um Zugriff auf die Pakete zu bekommen
+
+  * Die EULA erlaubt die Nutzung der Pakete in "internen CI Systemen"
 ]
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -971,24 +1022,108 @@ class: center, middle, inverse
 
 ???
 
-* there is no real hierarchy
-* Vox Pupuli is one big group
-* we work with lazy consensus
-* If a decision needs to be made and there is no majority for any of the options, PMC will choose
-* people love to work in such an environment, it enables people
+* Selbst wenn man als open source Freund noch Software von Perforce nutzen möchte, deren Lizenz ermöglicht es mir nicht.
+---
+
+count: false
+
+.left-column[
+## Perforce
+### Was?
+]
+
+.right-column[
+* Perforce baut keine Open Source Pakete mehr für Puppet Agent/Server/DB
+
+* Zukünftige Entwicklung soll in privaten Git Repos passieren
+
+* Es gibt eine "Developer EULA" um Zugriff auf die Pakete zu bekommen
+
+  * Die EULA erlaubt die Nutzung der Pakete in "internen CI Systemen"
+
+* Es ist nicht mehr möglich Puppet Module öffentlich zu entwickeln und mit Perforce Quellen zu testen
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[bastelfreak](https://github.com/bastelfreak) für [Vox Pupuli]((https://voxpupuli.org)]
+
+???
 
 ---
 
 .left-column[
-## Vox Pupuli
+## Perforce
 ### Was?
-### Wer?
-### Wieso?
-### Wie?
+### Wie (nicht)?
 ]
 
 .right-column[
-* Style Guide & Best Practices sind wichtig!
+![wie perforce auf github entwickelt](perforce_dev_flow.drawio2.svg)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[bastelfreak](https://github.com/bastelfreak) für [Vox Pupuli]((https://voxpupuli.org)]
+
+???
+
+Paketbau bei Perforce
+
+* Es gibt ein git repository
+* Es hat öffentliche Tests
+* es gibt einen Jenkins. Dieser war bis 2016 öffentlich und jeder konnte gucken was der so macht
+* Jetzt führt er vielleicht weitere tests aus, weiß man nicht.
+* irgendwie werden da auch pakete gebaut
+* was in den paketen drinn ist, und ob es was mit dem eigentlichen git repo zutun hat, weiß keiner
+* Perforce war nicht interessiert daran die pipelines von jenkins zu github zu migrieren/öffentlich zu machen
+* PRs wurden ignoriert
+* wer meint denn so ein setup ist sinnvoll?
+---
+.left-column[
+## Perforce
+### Was?
+### Wie (nicht)?
+]
+
+.right-column[
+Vox Pupuli Tools, welche von Perforce verkauft werden:
+
+* Alle wichtigen [puppet-lint plugins](https://rubygems.org/gems/voxpupuli-puppet-lint-plugins) (PDK)
+* [FacterDB](https://github.com/voxpupuli/facterdb) (PDK)
+* [metadata-json-lint](https://github.com/voxpupuli/metadata-json-lint) (PDK)
+* [json-schema](https://github.com/voxpupuli/json-schema) (PDK)
+* [rspec-puppet-facts](https://github.com/voxpupuli/rspec-puppet-facts) (PDK)
+* [puppet-blacksmith](https://github.com/voxpupuli/puppet-blacksmith) (PDK)
+* [puppet-syntax](https://github.com/voxpupuli/puppet-syntax) (puppet-dev-tools container)
+* [ra10ke](https://github.com/voxpupuli/ra10ke) (puppet-dev-tools container)
+* [onceover](https://github.com/voxpupuli/onceover) (puppet-dev-tools container)
+* [Beaker](https://github.com/voxpupuli/beaker) (Perforce intern genutzt)
+* [hiera-eyaml](https://github.com/voxpupuli/hiera-eyaml/) (PE und puppet-dev-tools container)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[bastelfreak](https://github.com/bastelfreak) für [Vox Pupuli]((https://voxpupuli.org)]
+
+???
+
+* das ist der komplette Stack um seine module zu testen. Statische Code analyse mit syntax checks und linting, unit tests, acceptance tests
+* Wie viel geld oder unterstützung bekommt die community von Perforce?
+---
+
+.left-column[
+## OpenVox
+### Was?
+]
+
+.right-column[
+* Vox Pupuli startet das OpenVoxProject
+
+* Neue GitHub Organisation
+
+  * Macht es später einfacher falls ein Teil des Projekts zur LF oder ähnliches wechseln soll
+
+* OpenVoxProject = Weiterentwicklung der Open Source versionen von Puppet Agent/Server/DB
+
+* Vox Pupuli = Puppet Module + Tooling
 ]
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
