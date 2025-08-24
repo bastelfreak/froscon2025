@@ -29,6 +29,11 @@ Außerdem möchte ich Lösungen aufzeigen wie es besser funktioniert und man kom
 
 * Weitere Vorträge gibt es in meinem Git [repository](https://github.com/bastelfreak/talks). Ich bin auch für inhouse Trainings und Puppet Consulting verfügbar.
 
+
+![IMG_1713.jpg](IMG_1713.jpg)
+![IMG_1714.jpg](IMG_1714.jpg)
+![IMG_1721.jpg](IMG_1721.jpg)
+
 ## License
 
 This project contains two licenses. The code is licensed as [GNU Affero General Public License v3.0](LICENSE).
